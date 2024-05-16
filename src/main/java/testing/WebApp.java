@@ -60,7 +60,7 @@ public class WebApp extends HttpServlet {
 	     
 	        String jsonResponse = response1.toString();
 	        double temperature = Double.parseDouble(jsonResponse.split("\"temp\":")[1].split(",")[0]);
-	        double humidity = Long.parseLong(jsonResponse.split("\"humidity\":")[1].split(",")[0]);
+	       // double humidity = Long.parseLong(jsonResponse.split("\"humidity\":")[1].split("},")[0]);
             double speed = Double.parseDouble(jsonResponse.split("\"speed\":")[1].split(",")[0]);
             long pressure = Long.parseLong(jsonResponse.split("\"pressure\":")[1].split(",")[0]);
 	        long sunrise = Long.parseLong(jsonResponse.split("\"sunrise\":")[1].split(",")[0]);
@@ -85,7 +85,7 @@ public class WebApp extends HttpServlet {
 	        
 	        ServletContext context = getServletContext();
 		    context.setAttribute("temp1", temperature);
-		    context.setAttribute("Humidity",humidity);
+		   // context.setAttribute("Humidity",humidity);
 		    context.setAttribute("wind", speed);
 		    context.setAttribute("Pressure", pressure);
 		    context.setAttribute("temp2", hour);

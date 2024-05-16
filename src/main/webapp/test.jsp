@@ -112,8 +112,8 @@
               ServletContext context=getServletContext();  
                 double n=(double)context.getAttribute("temp1");
                 int i = (int)n;
-                double n1 = (double)context.getAttribute("Humidity");
-                int i1 = (int)n1;
+               // double n1 = (double)context.getAttribute("Humidity");
+               // int i1 = (int)n1;
                 double n2 = (double)context.getAttribute("wind"); 
                 int i2 = (int)n2;
                 long n3 = (long)context.getAttribute("Pressure");
@@ -135,9 +135,7 @@
 	     <div>
 	         <h3 class="temp"><%out.print(i+"°C"); %></h3>
 	     </div>
-	    <div>
-	         <p class="humi"><%out.print("Humidity : "+i1+"%"); %></p>
-	     </div>
+	    
 	     <div>
 	         <p class="humi"><%out.print("Wind : "+i2+"km/h"); %></p>
 	     </div>
